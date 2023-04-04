@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            text-align: center;
+        }
         .bor-tab {
             border: 1px solid black;
         }
@@ -15,6 +18,7 @@
         th, td {
             border: 1px solid black;
             height: 100px;
+            width: 200px;
         }
         
         img {
@@ -22,12 +26,23 @@
             height: 100%;
         }
 
-        .image {
-            background-image: url("~/wwwroot/img/bufala.jpg");
-            background-repeat: no-repeat;
-            background-size: contain;
+        .image-buf {
+            background-image: url("/img/bufala.jpg");
+        }
 
-        } @* questo non funziona, rimessa immagine iniziale *@
+        .image-dia{
+            background-image: url("/img/diavola.jpg");
+        }
+
+        .image-ame {
+            background-image: url("/img/americana.jpg");
+        }
+
+        .image-buf, .image-dia, .image-ame {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        } 
     </style>
     <title>Le Nostre Pizze</title>
     
@@ -48,19 +63,19 @@
             <tr>
                 <td>1.Regina Margherita</td>
                 <td>Pizza margherita con mozzarella di Bufala</td>
-                <td><img src="~/img/bufala.jpg" /></td>
+                <td class="image-buf"></td>
                 <td>12.00€</td>
             </tr>
             <tr>
                 <td>2.Pizza Diavola</td>
                 <td>Pizza margherita con salame piccante</td>
-                <td><img src="~/img/diavola.jpg" /></td>
+                <td class="image-dia"></td>
                 <td>7.00€</td>
             </tr>
             <tr>
                 <td>3.Pizza Americana</td>
                 <td>Pizza margherita con wurstel e stick</td>
-                <td><img src="~/img/americana.jpg" /></td>
+                <td class="image-ame"></td>
                 <td>8.00€</td>
             </tr>
         </table>
