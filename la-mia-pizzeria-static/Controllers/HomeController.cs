@@ -13,6 +13,7 @@ namespace la_mia_pizzeria_static.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
